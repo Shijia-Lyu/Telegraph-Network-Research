@@ -1,0 +1,43 @@
+\documentclass[english,10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{babel}
+\usepackage{ctex}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{color}
+\title{Progress Report}
+\author{Sylvie}
+\begin{document}
+	\maketitle
+	\section{Data Availability}
+	\subsection{Variables of Interest}
+	$revo\_group$: newly formed groups or cumulated one?
+	\subsection{Control Variables}
+	Variables such as $rice\_price$ and $price\_level$ is useless since it just reflects differences in time (like time-series data). However, we can still use it as part of the interaction term.\par
+	* The next step: Find panel data that is suitable as control variables.\par
+	→ Cultural Capital, Train, ...\par
+	* I want to find peasant rebellion data or civil society data to continue my study.\par
+	* Pay attention the the value '0' and remember to make the data 'full'
+	* Present the data with a detailed table.\par
+	\subsection{Regional Limit}
+	\begin{itemize}
+		\item Check whether the geographical region during 1881-1911 changed.
+		\item Delete unnecessary provinces (exclude provinces with $tele$ and $revo\_goup$ both equals 0)
+		\item If necessary, merge some data (e.g. Fengtian, Jilin and Heilongjiang could be considered as \textit{Dongsansheng})
+	\end{itemize}
+	\subsection{Potential IV}
+	We could use some climate data (such as drought, water precipitation etc.) to run IV regression (to solve endogenous problems)
+	\section{Baseline Regression}
+	\subsection{Fixed Effect and Robustness Check}
+	* The current problem is that the result does not comply with \textbf{Homoscedasticity} hypothesis - find some solutions
+	\subsection{Regression Coefficient}
+	Calculate the mean, median etc. to check the significance of the coefficient.
+	\section{Mechanism Analysis}
+	* RDD means all variables are continuous except one.\par
+	* RD regression: Maybe we can use the Southeast Mutual Protection as an IV. (or maybe an event-study)\par
+	* What is related to communication cost?
+	* Short-term and long-term effect: Consider lag effect
+\end{document}
